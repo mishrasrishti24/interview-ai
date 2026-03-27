@@ -1,0 +1,50 @@
+.button {
+    border: none;
+    outline: none;
+    padding-inline: 1.5rem;
+    padding-block: 0.75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.primary-button {
+        background-color: #e1034d;
+        color: white;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+
+// ── Responsive (ONLY ADDITION) ─────────────────────────────────────────
+
+// Tablet
+@media (max-width: 1024px) {
+    .button {
+        padding-inline: 1.25rem;
+        padding-block: 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+// Mobile
+@media (max-width: 768px) {
+    .button {
+        width: 100%;              // full width button
+        text-align: center;
+        padding-block: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+// Small Mobile
+@media (max-width: 480px) {
+    .button {
+        padding-inline: 1rem;
+        padding-block: 0.65rem;
+        font-size: 0.85rem;
+        border-radius: 0.75rem;
+    }
+}
