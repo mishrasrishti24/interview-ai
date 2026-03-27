@@ -4,7 +4,6 @@ const cors = require("cors");
 
 const app = express();
 
-// ✅ CORS FIRST
 app.use(cors({
     origin: [
         "http://localhost:5173",
@@ -13,14 +12,9 @@ app.use(cors({
     credentials: true
 }));
 
-// ✅ FIXED preflight handler
-app.options("/*", cors());
-
-// ✅ other middleware
 app.use(express.json());
 app.use(cookieParser());
 
-// routes
 const authRouter = require("./routes/auth.routes");
 const interviewRouter = require("./routes/interview.routes");
 
